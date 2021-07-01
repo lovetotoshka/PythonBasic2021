@@ -11,9 +11,9 @@ class Plane(base.Vehicle):
         super.__init__(weight, fuel, fuel_consumption)
         self.max_cargo = max_cargo
 
-    def load_cargo(self, num):
-        if self.cargo + num <= self.max_cargo:
-            self.cargo += num
+    def load_cargo(self, plane):
+        if self.cargo + plane <= self.max_cargo:
+            self.cargo += plane
         else:
             raise exceptions.CargoOverload('Cargo Over load !!!')
 

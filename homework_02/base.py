@@ -2,7 +2,6 @@ from homework_02 import exceptions
 
 
 class Vehicle:
-
     started = False
 
     def __init__(self, weight=100, fuel=100, fuel_consumption=10):
@@ -25,12 +24,4 @@ class Vehicle:
             else:
                 raise exceptions.NotEnoughFuel('Not Enough Fuel !!!')
         else:
-                raise exceptions.NotEnoughFuel('Not Enough Fuel !!!')
-
-
-
-
-
-
-
-
+            raise exceptions.NotEnoughFuel('Not Enough Fuel !!!')

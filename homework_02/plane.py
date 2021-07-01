@@ -19,9 +19,6 @@ class Plane(base.Vehicle):
             raise exceptions.CargoOverload('Cargo Over load !!!')
 
     def remove_all_cargo(self):
-        yield self.cargo
+        a = self.cargo
         self.cargo = 0
-
-
-plane = Plane(100, 200, 10, 50)
-print(plane.weight, plane.fuel, plane.fuel_consumption, plane.max_cargo)
+        return a

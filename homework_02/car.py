@@ -13,9 +13,3 @@ class Car(base.Vehicle):
     def set_engine(self, new_engine):
         self.engine = new_engine
 
-
-#car = Car(101, 101, 11)
-#print(car.weight, car.fuel, car.fuel_consumption, '!!!!!!')
-#a = engine.Engine(10, 20)
-#car.set_engine(a)
-#print (car.engine.volume, car.engine.pistons)

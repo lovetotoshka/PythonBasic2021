@@ -5,10 +5,11 @@ from homework_02 import base, exceptions
 
 
 class Plane(base.Vehicle):
+
     cargo = 0
 
     def __init__(self, weight, fuel, fuel_consumption, max_cargo):
-        super.__init__(weight, fuel, fuel_consumption)
+        super().__init__(weight, fuel, fuel_consumption)
         self.max_cargo = max_cargo
 
     def load_cargo(self, plane):
@@ -22,3 +23,5 @@ class Plane(base.Vehicle):
         self.cargo = 0
 
 
+plane = Plane(100, 200, 10, 50)
+print(plane.weight, plane.fuel, plane.fuel_consumption, plane.max_cargo)

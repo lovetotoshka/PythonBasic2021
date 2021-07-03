@@ -6,26 +6,28 @@ from random import randint
 #import questions_and_answers
 from other.my_self_test import questions_and_answers
 
+def input_correct_value():
+    correct_value = False
+    while not correct_value:
+        try:
+            score = int(input())
+            if 0 <= score < 6:
+                correct_value = True
+            else:
+                print('Ваше число слишком большое. Ведите число от 0 до 5')
+        except ValueError:
+            print('Вы можете ввести только числа. Ведите число от 0 до 5')
+    return score
 
 def all_test(lst):
     all_score = 0
     for i  in lst:
         question, answer = i
-        print(question)
-        input()
-        print("\nПравильный ответ: \n\t", answer)
-        print("Оцените себя за этот вопрос по шкале от 0 до 5")
-        correct_value = False
-        while not correct_value:
-            try:
-                score = int(input())
-                if 0 <= score < 6:
-                    correct_value = True
-                    all_score += score
-                else:
-                    print('Ваше число слишком большое. Ведите число от 0 до 5')
-            except ValueError:
-                print('Вы можете ввести только числа. Ведите число от 0 до 5')
+        #print(question)
+        input(question)
+        print("\nПравильный ответ: \n\t", answer, '\nОцените себя за этот вопрос по шкале от 0 до 5')
+        num = input_correct_value()
+        all_score += num
         os.system('cls')
     print(f"Вы набрали {all_score} из 50")
 

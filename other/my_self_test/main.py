@@ -23,7 +23,6 @@ def all_test(lst):
     all_score = 0
     for i  in lst:
         question, answer = i
-        #print(question)
         input(question)
         print("\nПравильный ответ: \n\t", answer, '\nОцените себя за этот вопрос по шкале от 0 до 5')
         num = input_correct_value()
@@ -40,8 +39,31 @@ def select_a_rand_question(lst):
 
 
 if __name__ == '__main__':
-    #new_lst = questions_and_answers.new_list
     lst = questions_and_answers.new_list()
+    start = True
+    while start:
+        print("""
+        меню:
+        "1" - выбрать случайный вопрос
+        "2" - пройти весь тест
+        "3" - пройти тест только по нужной теме
+        "4" - добавить вопрос и ответ
+        "5" - удалить вопрос и ответ
+        "6" - найти вопрос по ключевым словам
+        "7" Выйти \n""")
+        num = input()
+        if num == '1':
+            select_a_rand_question(lst)
+        elif num =='2':
+            all_test(lst)
+        elif num == '7':
+            start = False
+        else:
+            print("Введите число от 1 до 7")
+
+
+
+
     #select_a_rand_question(lst)
-    all_test(lst)
+    #all_test(lst)
 

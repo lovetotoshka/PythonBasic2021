@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 question_1 = "Что Вы знаете про язык Python?"
 answer_1 = """
     - это интерпретируемый язык
@@ -83,7 +85,8 @@ answer_10 = """
 def new_list():
     lst = []
     for i in range(1, 11):
-        our_question = "self.question_" + str(i)
-        our_answer = "self.answer_" + str(i)
-        lst += (our_question, our_answer)
+        our_question = "question_" + str(i)
+        our_answer = "answer_" + str(i)
+        lst.append((eval(our_question), eval(our_answer)))
     return lst
+

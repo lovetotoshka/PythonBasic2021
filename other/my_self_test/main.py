@@ -1,13 +1,16 @@
+# -*- coding: utf-8 -*-
+
 import os
 from random import randint
 
 #import questions_and_answers
-from self_test import questions_and_answers
+from other.my_self_test import questions_and_answers
 
 
 def all_test(lst):
     all_score = 0
-    for question,answer in lst:
+    for i  in lst:
+        question, answer = i
         print(question)
         input()
         print("\nПравильный ответ: \n\t", answer)
@@ -26,15 +29,17 @@ def all_test(lst):
         os.system('cls')
     print(f"Вы набрали {all_score} из 50")
 
-def select_a_rand_question(lst: list):
+def select_a_rand_question(lst):
     i = randint(0, len(lst) - 1)
-    our_question, our_answer = lst(i)
-    print(our_question))
+    our_question, our_answer = lst[i]
+    print(our_question)
     input()
     print("\nПравильный ответ: \n", our_answer)
 
 
 if __name__ == '__main__':
-    lst = new_lst()
-    select_a_rand_question(lst)
+    #new_lst = questions_and_answers.new_list
+    lst = questions_and_answers.new_list()
+    #select_a_rand_question(lst)
     all_test(lst)
+

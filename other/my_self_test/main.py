@@ -37,6 +37,12 @@ def select_a_rand_question(lst):
     input()
     print("\nПравильный ответ: \n", our_answer)
 
+def add_question_and_answer(lst):
+    question = input("Введите свой вопрос\n")
+    answer = input("Введите свой ответ\n")
+    lst.append((question, answer))
+    return lst
+
 
 if __name__ == '__main__':
     lst = questions_and_answers.new_list()
@@ -56,6 +62,8 @@ if __name__ == '__main__':
             select_a_rand_question(lst)
         elif num =='2':
             all_test(lst)
+        elif num == '4':
+            add_question_and_answer(lst)
         elif num == '7':
             start = False
         else:

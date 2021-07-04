@@ -26,7 +26,7 @@ def select_topic_and_our_func(func):
         print("\nКакая тема Вас интересует?\n'1' - topic_1\n'2' - topic_2 ")
         topic = str(input_value_from_x_to_y(1, 2))
         func('topic_' + topic)
-    return inner
+    return inner #убрала скобки
 
 def all_test_on_the_right_topic(topic):
     all_score = 0

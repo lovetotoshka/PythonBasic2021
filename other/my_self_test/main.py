@@ -22,12 +22,11 @@ def input_value_from_x_to_y(x=0, y=5):
     return score
 
 def select_topic_and_our_func(func):
-    print ('select_topic_and_our_func _________________')
     def inner():
         print("\nКакая тема Вас интересует?\n'1' - topic_1\n'2' - topic_2 ")
         topic = str(input_value_from_x_to_y(1, 2))
         func('topic_' + topic)
-    return inner()
+    return inner
 
 def all_test_on_the_right_topic(topic):
     all_score = 0
@@ -110,9 +109,6 @@ if __name__ == '__main__':
         print (num)
         if num == '1':
             select_a_rand_question_in_necessary_topic()
-
-            #select_topic_and_actions(select_a_rand_question_in_necessary_topic())
-
             #print("\nКакая тема Вас интересует?\n'1' - topic_1\n'2' - topic_2 ")
             #topic = str(input_value_from_x_to_y(1, 2))
             #select_a_rand_question_in_necessary_topic('topic_' + topic)

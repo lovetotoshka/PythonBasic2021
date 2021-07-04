@@ -141,5 +141,5 @@ def new_list():
 #for topic in all_questions.keys():
 #    for value in all_questions[topic].values():
  #       print (value[0])
-value = all_questions['topic_1']['questions'][0]
-print(value)
+#value = all_questions['topic_1']['questions'][0]
+#print(value)
